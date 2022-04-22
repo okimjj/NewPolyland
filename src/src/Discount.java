@@ -1,6 +1,6 @@
 
 public class Discount {
-//	OrderVariables orderVariable;
+
 	void discount (int dcCondition, OrderVariables orderVariable) {
 		if (dcCondition == 1) {
 			orderVariable.price = orderVariable.price - (int)(orderVariable.price * StaticValues.DC_DIS_NAT_PREG);
