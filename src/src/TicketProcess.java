@@ -42,8 +42,7 @@ public class TicketProcess {
 				dataPrint.write(orderList.get(orderList.size() - 1).age + " ¼¼ ,");
 				dataPrint.write(orderList.get(orderList.size() - 1).price + ",");
 				dataPrint.write(orderList.get(orderList.size() - 1).numberOfTicket + ",");
-				dataPrint.write(orderList.get(orderList.size() - 1).discountType + ",");
-				dataPrint.write(orderList.get(orderList.size() - 1).price + "\n");
+				dataPrint.write(orderList.get(orderList.size() - 1).discountType + "\n");
 				
 				dataPrint.flush();
 				dataPrint.close();
