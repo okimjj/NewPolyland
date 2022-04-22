@@ -35,10 +35,6 @@ public class OrderStage {
 	System.out.printf("º±≈√: ");
 	variables.discountCondition = scanner.nextInt();
 	
-//	System.out.println("*****************"+variables.dayOrNight);
-//	System.out.println("*****************"+variables.juminString);
-//	System.out.println("*****************"+variables.numberOfTicket);
-//	System.out.println("*****************"+variables.discountCondition);
 	return variables;
 	}
 }
