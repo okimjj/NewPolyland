@@ -11,7 +11,6 @@ public class TicketProcess {
 	TicketChoice tickChoice = new TicketChoice(); //권종 선택에 따른 가격 계산 클래스
 	Discount dc = new Discount(); //할인 조건에 따른 가격 계산 클래스
 	RepeatCheck rpCheck = new RepeatCheck(); // 반복 여부 확인 클래스
-	CsvWrite csv = new CsvWrite();
 	EndPrint end = new EndPrint(); //최종 구매 결과 출력 클래스
 	
 	void run() {
@@ -34,6 +33,25 @@ public class TicketProcess {
 			rpCheck.check(variables);
 			
 			orderList.add(variables);
+			
+			try {
+				BufferedWriter dataPrint;
+				dataPrint = new BufferedWriter(new FileWriter("C:\\Users\\jj\\Desktop\\NewPolylandUp\\SellData.csv", true));
+				dataPrint.write(orderList.get(orderList.size() - 1).ticketTypeName + ",");
+				dataPrint.write(orderList.get(orderList.size() - 1).ageGroup + ",");
+				dataPrint.write(orderList.get(orderList.size() - 1).age + " 세 ,");
+				dataPrint.write(orderList.get(orderList.size() - 1).price + ",");
+				dataPrint.write(orderList.get(orderList.size() - 1).numberOfTicket + ",");
+				dataPrint.write(orderList.get(orderList.size() - 1).discountType + ",");
+				dataPrint.write(orderList.get(orderList.size() - 1).price + "\n");
+				
+				dataPrint.flush();
+				dataPrint.close();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		} while (variables.repeat == 1);
 		
