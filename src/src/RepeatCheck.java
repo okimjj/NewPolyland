@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class RepeatCheck {
 	Scanner scanner = new Scanner(System.in);
-//	OrderVariables variables;
 	
 	void check (OrderVariables variables){
 		System.out.printf("****************************************\n");
