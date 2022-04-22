@@ -34,6 +34,6 @@ public class StaticValues {
 	static String DC_TYPE_PREGNANT = " (임산부 할인)";
 	static String DC_TYPE_SOLDIER = "(휴가 장병 할인)";
 	static String DC_TYPE_MULTILKID = " (다둥이 할인)";
-	static String DC_TYPE_NONE = " (할인 헤택 없음)";
+	static String DC_TYPE_NONE = " (할인 혜택 없음)";
 
 }
