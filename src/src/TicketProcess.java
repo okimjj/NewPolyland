@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class TicketProcess {
@@ -8,6 +11,7 @@ public class TicketProcess {
 	TicketChoice tickChoice = new TicketChoice(); //권종 선택에 따른 가격 계산 클래스
 	Discount dc = new Discount(); //할인 조건에 따른 가격 계산 클래스
 	RepeatCheck rpCheck = new RepeatCheck(); // 반복 여부 확인 클래스
+	CsvWrite csv = new CsvWrite();
 	EndPrint end = new EndPrint(); //최종 구매 결과 출력 클래스
 	
 	void run() {
@@ -46,6 +50,6 @@ public class TicketProcess {
 		}
 		
 		System.out.printf("==================================\n");
-		System.out.printf("총 결제액은 %d원입니다. 감사합니다.", variables.priceFinal); //최종 총액 출력
+		System.out.printf("총 결제액은 %d원입니다. 감사합니다.", variables.priceFinal); //최종 총액 출력 
 	}
 }
