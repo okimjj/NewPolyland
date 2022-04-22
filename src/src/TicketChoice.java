@@ -1,6 +1,6 @@
 
 public class TicketChoice {
-//	OrderVariables variables;
+
 	
 	void ticketChoice (int choice, OrderVariables variables) {
 		if (choice == 1) {
